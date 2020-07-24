@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+
+echo Welcome $USER !!
+
+while true;do
+	trap "echo NOPE" INT
+	echo Select your option
+	select CH in 'Reset Password' 'Show Disk Usage' 'Ping a host' 'Logout'
+	do 
+		clear
+		case $REPLY in
+			1) 
+			echo "Enter hostname for which password needs to be change:";read $HN;sudo passwd $HN
+			echo
+			break
+			;;
+
+			2) df -h
+			echo
+			break
+			;;
+
+			3) 	
+			echo "Please mention hostname";read HOSTN;ping -c 1 $HOSTN
+			echo
+			break
+			;;
+
+			4) echo Goodbye && exit 0;;
+
+			*)
+			echo Invalid Selection
+			echo
+			break
+			;;
+		esac
+	done
+done

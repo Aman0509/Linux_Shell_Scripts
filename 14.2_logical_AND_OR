@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#This scripts is a use case of logical AND and OR
+
+[ -z $1 ] && echo No Argument provided!! && exit 2
+[ -f $1 ] && echo $1 is a File && exit 0
+[ -d $1 ] && echo $1 is a Directory || echo $1 is neither a File or Directory
+
+
+exit 0

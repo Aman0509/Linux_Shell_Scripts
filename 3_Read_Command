@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#We will see the use of 'read' command
+#Usage: ./3_Read_Command
+
+
+echo Hello!! How are you?
+echo May I know you name?
+read VAR
+echo Hello $VAR! Welcome to Linux Scripting World!
+echo ":)"
+
+exit 0

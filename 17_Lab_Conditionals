@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+
+for i in $(cat ldap_users)
+do
+	USER=${i%%,*}
+	USER=${USER#*=}
+	echo $USER >> users
+done
+
+for j in $(cat users);do echo useradd $j;done
+
+
+exit 0
+

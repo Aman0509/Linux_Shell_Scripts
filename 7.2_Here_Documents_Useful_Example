@@ -1,0 +1,13 @@
+#!bin/bash
+#
+#Example of a scripted Python session
+
+python3 << EndofSession
+print("This is Python Session by Here Documents")
+print("bye")
+exit()
+EndofSession
+
+echo Python session opened and closed sucessfully
+
+exit 0

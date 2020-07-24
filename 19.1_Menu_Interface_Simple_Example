@@ -1,0 +1,21 @@
+#!/bin/bash
+#Demo Script that shows making menus with select 
+
+echo "Select a directory: "
+
+select DIR in /usr /bin /etc /root /home
+
+do
+	if [[ -n $DIR ]]
+	then
+		echo You have selected $DIR
+		break
+	else
+		echo invalid choice!!
+		break	
+	fi
+
+done
+
+exit 0
+

@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#This scipt transform the string cn=lara,dc=example,dc=com
+#in a way that the user name(lara) is extracted from the string
+
+STRING='cn=lara,dc=example,dc=com'
+USER=${STRING%%,*}
+USER=${USER#*=}
+USER=$(echo $USER | tr [:lower:] [:upper:])
+
+echo Username is $USER
+
+exit 0
+

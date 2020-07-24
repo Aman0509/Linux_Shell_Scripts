@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#Use Case of Single and Double Square brackets as test
+#If you are confuse here, trying running each command in command shell
+
+SOME_VAR=abcde
+echo 'Showing this case [ $SOME_VAR = a* ] || echo String does not start with a'
+[ $SOME_VAR = a* ] || echo String does not start with a
+
+echo 'Showing this case [[ $SOME_VAR = a* ]] || echo String does not start with a'
+[[ $SOME_VAR = a* ]] || echo String does not start with a
+
+echo 'Single Sqaure brackets are more syntax strict'
+echo 'Just remove space from both side of "="'
+[ $SOME_VAR=a* ] || echo String does not start with a
+
+
+exit 0

@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+#
+#This script shows how arguments are handled smartly
+#Usage: ./5.2_Var_as_Args_Extended
+
+echo "\$* gives $*"
+echo "\$# gives $#"
+echo "\$@ gives $@"
+echo "\$0 gives $0"
+
+#Showing the interpretetion of \$*
+
+for i in "$*"
+do
+	echo $i
+done
+
+#Showing the interpretetion of \$*
+
+for j in "$@"
+do
+	echo $j
+done
+
+exit 0

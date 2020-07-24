@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#This script will count all present file in directory
+#passed by user
+
+echo In which directory do you want to count the files?
+read DIR
+[ -z $DIR ] && echo No directoy provided && exit 2
+[ -f $DIR ] && echo $DIR is a file && exit 2
+[ -d $DIR ] || echo No such directory exist!! || exit 2
+
+cd $DIR
+COUNTER=0
+for i in *
+do
+	COUNTER=$((COUNTER+1))
+done
+
+echo Total number of files in $DIR is $COUNTER
+
+exit 0

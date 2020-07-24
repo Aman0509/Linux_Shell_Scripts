@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+#This is part of sourcing example script
+#This is file from which variables are used by another script
+
+NAME=Aman

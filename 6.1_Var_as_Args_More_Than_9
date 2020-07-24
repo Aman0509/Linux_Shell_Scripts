@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#Simple demo script with arguments
+
+echo "Hello $1, How are you?"
+echo "Hello $2, How are you?"
+echo "Hello $10, How are you?"
+
+exit 0
+

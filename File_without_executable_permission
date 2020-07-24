@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#This is a Comment
+
+
+#This will print "My First Bash Script"
+
+echo My First Bash Script
+

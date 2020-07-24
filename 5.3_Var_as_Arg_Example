@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#This Script shows how to make sure that user input is provided
+#Usage: ./5.3_Var_as_Args_Example
+
+if [ -z $1 ]
+then
+	echo Provide Filenames
+	read FILENAMES
+else
+	FILENAMES="$@"
+fi
+
+echo Following Filenames have been provided: $FILENAMES
+
+exit 0

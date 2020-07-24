@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#
+#This is script where the use case of variables passed as arguments will be seen
+#You can remember this by comparing it with python sys.args()
+#Usage: ./5_Var_as_Args
+
+
+echo Hello $1!! Welcome to Scripting World
+echo Your fav programming language is $2
+echo and your fav OS is $3
+echo You are in file named as $0
+
+exit 0
+

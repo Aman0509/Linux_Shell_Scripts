@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#This script will put the result of the command : date +%d-%m-%y
+#in a variable.
+#Hint - Use Pattern Matching
+
+
+DATE_VAR=$(date +%d-%m-%y)
+echo "The day is" ${DATE_VAR%%-*}
+MONTH=${DATE_VAR%-*}
+echo "The month is" ${MONTH#*-}
+echo "The year is" ${DATE_VAR##*-}
+
+
+exit 0

@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#This is an example about sourcing
+#Usage: ./4.1_Master_Script
+
+#To port another script, we can either use .(dot) or 'source' command
+source ./'4.2_Source_Script'
+
+echo How are you doing Mr $NAME?
+echo Just letting you know Sir, you personal details are safe and stored in a separate location
+
+
+exit 0

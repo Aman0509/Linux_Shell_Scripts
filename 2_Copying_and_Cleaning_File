@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#In this script, I am deleting content of file after copying it into another
+#Usage ./2_Script
+
+FILE_PATH=/home/aman8055/Testing_Area_Linux/Shell_Scripts_Practice/text
+
+cp $FILE_PATH $FILE_PATH.old
+cat /dev/null > $FILE_PATH
+echo Operation Successful!!!
+
+exit 0

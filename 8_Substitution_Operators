@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+#This script is showing the use of Substitution Operaters
+
+#INSTEAD IN SCRIPT, TRY THESE COMMANDS IN COMMAND LINE ITSELF
+
+#Here ${VAR:-word} & ${VAR:=word} is discussed
+
+P_VAR=
+echo "P_VAR is a variable which stores some path and currently blank"
+echo "\$P_VAR = $P_VAR"
+echo ${P_VAR:-/path/not/set/but/it/will/return/this}
+echo
+echo 'Setting Path using ${VAR:=}' 
+echo ${P_VAR:=/home/aman8055/}
+
+#Here ${VAR:?word} & ${VAR:offset:length} is discussed
+
+Q_VAR=
+echo "Q_VAR is a variable which stores some path and currently blank"
+echo "\$Q_VAR = $Q_VAR"
+echo ${Q_VAR:?Path is not set}
+echo
+echo 'Setting Path using ${Q_VAR:=}' 
+echo ${Q_VAR:=/home/batlap/}
+echo ${Q_VAR:0:10}
+
+exit 0

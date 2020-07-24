@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#This is a Comment
+#
+#This will print "My First Bash Script"
+#Usage ./1_Shell_Script
+
+clear
+echo My First Bash Script
+echo I am testing git now
+
+exit 0

@@ -1,0 +1,37 @@
+#!/bin/bash
+# sample administration menu
+
+# In 'case' statement if you will see, 1,2 and 3 are used as case options. So while selecting 
+# your choice as 1,2 or 3 during runtime, select will actually give output 'Check mounts', 'Check disk space' 
+# or 'Check Memory Usage' respectively and if I write case statement like this "case $CHOICE in", 
+# then I will always get error as output because CHOICE value would be adjacet to number 1,2 or 3
+# which is either 'Check mounts', 'Check disk space' or 'Check Memory Usage' respectively
+# and not the munber 1,2 or 3 itslef. I have not defined cases with these names. 
+# So, in order to overwrite select output, I have used different variable in case($REPLY)
+# which is storing my choice and you can consider that select is only used for displaying
+# menu. I hope you got it. If not, try to change case option value from 1,2,3 to lets says,
+# a,b,c and during giving choice, put a,b or c and you will, it will work. However, if you put
+# 1,2 or 3. It will throw error. 
+
+
+echo 'select a task: '
+select CHOICE in 'Check mounts' 'Check disk space' 'Check Memory Usage'
+
+do
+	case $REPLY in
+		1) TASK="mount";;
+		2) TASK="df -h";;
+		3) TASK="free -m";;
+		*) echo ERROR && exit 2;;
+	esac
+	if [ -n "$TASK" ]
+	then
+		clear
+		$TASK
+		break
+	else
+		echo INVALID CHOICE && exit 3
+	fi
+done
+
+exit 0

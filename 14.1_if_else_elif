@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#Testing if then fi, else and elif
+
+if [[ -z $1 ]]
+then
+	echo There is no name passed!!
+
+elif [[ -d $1 ]]
+then
+	echo $1 is a directory
+
+elif [[ -f $1 ]]
+then
+	echo $1 is a file
+
+else
+	echo $1 is neither a directory nor a file
+
+fi
+
+exit 0 

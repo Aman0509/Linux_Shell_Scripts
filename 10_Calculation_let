@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#Using let
+#Here we are defining 3 Argument Variable
+#$1 is the 1st number
+#$2 is the operator
+#$3 is the 2nd operator
+
+let x="$1 $2 $3"
+echo $x
+
+exit 0
